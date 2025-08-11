@@ -2,9 +2,9 @@
 
 const siteConfig = {
     name: "Sumit Sah",                              // ← Change your name
-    title: "Senior Software Engineer",              // ← Change your job title  
-    affiliation: "Tech Innovation Lab",             // ← Change your company
-    email: "sumit.sah@example.com",                // ← Change your email
+    title: "Senior Research Fellow",              // ← Change your job title  
+    affiliation: "Indian Institute of Technology Dharwad, India",             // ← Change your company
+    email: "sumit.sah1824@gmail.com",                // ← Change your email
     socialLinks: {
         googleScholar: "https://scholar.google.com/citations?user=your-id",  // ← Your Google Scholar
         linkedin: "https://linkedin.com/in/your-username",                   // ← Your LinkedIn
