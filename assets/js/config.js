@@ -16,7 +16,7 @@ const SITE_CONFIG = {
     
     // Navigation Menu - Add/remove pages here
     navigation: [
-        { href: "index.html", text: "About", page: "index" },
+        { href: "/", text: "About", page: "index" },
         { href: "research.html", text: "Research", page: "research" },
         { href: "group.html", text: "Group", page: "group" },
         { href: "teaching.html", text: "Teaching", page: "teaching" },
