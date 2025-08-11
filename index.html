@@ -4,62 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit Sah - Software Engineer</title>
+    <title>Sumit Sah</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Sumit Sah</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">Sumit Sah</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">About</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="group.html" class="nav-link">Group</a>
+                <a href="teaching.html" class="nav-link">Teaching</a>
+                <a href="activities.html" class="nav-link">Activities</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <div class="profile-image">
-                <!-- Replace this placeholder with your actual photo -->
-                <!-- div class="profile-placeholder">SS</div -->
-                <img src="assets/images/profile.jpg" alt="Sumit Sah">
-                <!-- Uncomment and use this when you have a photo:
-                <img src="assets/images/profile.jpg" alt="Sumit Sah">
-                -->
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <!-- Replace with your actual image -->
+                        <img src="assets/images/profile.jpg" alt="Sumit Sah" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="profile-placeholder">SS</div>
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-name">Sumit Sah</h2>
+                        <p class="profile-title">Senior Software Engineer</p>
+                        <p class="profile-affiliation">Tech Innovation Lab</p>
+                        <a href="mailto:sumit.sah@example.com" class="profile-email">sumit.sah@example.com</a>
+                    </div>
+                </div>
+
+                <div class="bio-section">
+                    <p>I am a Senior Software Engineer at <a href="#" class="link">Tech Innovation Lab</a> specializing in full-stack development and cloud architecture. I am passionate about building scalable systems and have expertise in <a href="research.html" class="link">modern web technologies</a>, distributed systems, and <a href="research.html" class="link">machine learning integration</a>. My work focuses on developing high-performance applications that serve millions of users globally.</p>
+
+                    <p>Before joining Tech Innovation Lab, I was a Software Developer at <a href="#" class="link">Digital Solutions Inc.</a> where I led the development of enterprise-scale applications. I obtained my Master's degree in Computer Science from <a href="#" class="link">University of Technology</a> where I was fortunate to work under the guidance of <a href="#" class="link">Prof. John Anderson</a>. My thesis focused on distributed computing patterns and was recognized with the Outstanding Graduate Research Award.</p>
+
+                    <p>During my career, I have contributed to several <a href="#" class="link">open-source projects</a> and have been involved in research collaborations with academic institutions. I have published papers on scalable web architectures and have spoken at various technical conferences. My work has been instrumental in improving system performance by up to 300% and reducing operational costs significantly.</p>
+
+                    <p>I hold a Bachelor's degree in Computer Engineering from <a href="#" class="link">Engineering Institute</a> where I graduated summa cum laude. During my undergraduate studies, I was actively involved in competitive programming and won several national-level coding competitions.</p>
+
+                    <p>For more information, see my <a href="assets/files/resume.pdf" class="link">CV</a>.</p>
+                </div>
             </div>
-            
-            <h1 class="profile-name">Sumit Sah</h1>
-            <div class="profile-title">Software Engineer</div>
-            <div class="profile-institution">Technology Professional</div>
-            <a href="mailto:sumitsah@example.com" class="profile-email">sumitsah@example.com</a>
         </div>
-
-        <!-- Content Section -->
-        <div class="content-section">
-            <section id="about">
-                <p>I am a passionate <strong>Software Engineer</strong> specializing in full-stack development and modern web technologies. I am experienced in building scalable applications using <a href="research.html">React, Node.js, and Python</a>, with a focus on creating efficient and maintainable solutions.</p>
-
-                <p>My expertise spans across frontend and backend development, database design, and cloud technologies. I have worked extensively with modern frameworks and tools, contributing to both enterprise applications and open-source projects. My approach combines technical excellence with user-centered design principles.</p>
-
-                <p>Before my current role, I gained valuable experience working on diverse projects ranging from e-commerce platforms to data visualization tools. I hold a degree in Computer Science and continuously update my skills to stay current with emerging technologies and industry best practices.</p>
-
-                <p>My research interests include web performance optimization, scalable architecture design, and the intersection of artificial intelligence with web development. I'm particularly fascinated by how modern JavaScript frameworks and cloud technologies can be leveraged to build next-generation applications.</p>
-
-                <p>I actively contribute to the developer community through <a href="https://github.com/sumitsah" target="_blank">open-source projects</a>, technical writing, and mentoring junior developers. I believe in the power of collaborative development and continuous learning.</p>
-
-                <p>For more information about my work and experience, please see my <a href="assets/files/resume.pdf" target="_blank">resume</a>.</p>
-            </section>
-        </div>
-    </div>
+    </main>
 
     <script src="assets/js/script.js"></script>
 </body>
