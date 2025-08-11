@@ -1,10 +1,10 @@
-<!-- research.html -->
+<!-- group.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Sumit Sah</title>
+    <title>Group - Sumit Sah</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +13,11 @@
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="site-title">Sumit Sah</h1>
+            <a href="index.html" class="site-title">Sumit Sah</a>
             <nav class="nav">
                 <a href="index.html" class="nav-link">About</a>
-                <a href="research.html" class="nav-link active">Research</a>
-                <a href="group.html" class="nav-link">Group</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="group.html" class="nav-link active">Group</a>
                 <a href="teaching.html" class="nav-link">Teaching</a>
                 <a href="activities.html" class="nav-link">Activities</a>
                 <a href="blog.html" class="nav-link">Blog</a>
@@ -30,12 +30,16 @@
         <div class="container">
             <div class="content-wrapper">
                 <div class="profile-section">
-                    <div class="profile-image">
-                        <img src="assets/images/profile.jpg" alt="Sumit Sah" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                        <div class="profile-placeholder">SS</div>
-                    </div>
+                    <a href="index.html" class="profile-image-link">
+                        <div class="profile-image">
+                            <img src="assets/images/profile.jpg" alt="Sumit Sah" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="profile-placeholder">SS</div>
+                        </div>
+                    </a>
                     <div class="profile-info">
-                        <h2 class="profile-name">Sumit Sah</h2>
+                        <a href="index.html" class="profile-name-link">
+                            <h2 class="profile-name">Sumit Sah</h2>
+                        </a>
                         <p class="profile-title">Senior Software Engineer</p>
                         <p class="profile-affiliation">Tech Innovation Lab</p>
                         <a href="mailto:sumit.sah@example.com" class="profile-email">sumit.sah@example.com</a>
@@ -43,40 +47,43 @@
                 </div>
 
                 <div class="bio-section">
-                    <h3 class="section-title">Research Interests</h3>
-                    <p>My research focuses on the intersection of software engineering and distributed systems. I am particularly interested in:</p>
-                    <ul class="research-list">
-                        <li>Scalable web architecture patterns and microservices design</li>
-                        <li>Performance optimization in cloud-native applications</li>
-                        <li>Machine learning integration in production systems</li>
-                        <li>Real-time data processing and stream computing</li>
-                    </ul>
+                    <h3 class="section-title">Team & Collaborations</h3>
+                    <p>I work with a talented team of engineers and researchers who are passionate about building the next generation of scalable software systems. Our team combines industry experience with academic rigor to solve complex technical challenges.</p>
 
-                    <h3 class="section-title">Publications</h3>
+                    <h3 class="section-title">Current Team Members</h3>
                     
-                    <div class="publication">
-                        <h4 class="pub-title">Optimizing Microservices Performance in Cloud Environments</h4>
-                        <p class="pub-authors">Sumit Sah, Jane Smith, Robert Johnson</p>
-                        <p class="pub-venue">Proceedings of the International Conference on Software Engineering, 2024</p>
-                        <p class="pub-description">This paper presents novel optimization techniques for microservices architectures deployed in cloud environments, achieving up to 40% improvement in response times.</p>
+                    <div class="team-member">
+                        <h4 class="member-name">Dr. Sarah Johnson</h4>
+                        <p class="member-role">Senior Research Engineer</p>
+                        <p class="member-description">PhD in Distributed Systems from MIT. Focuses on cloud architecture and performance optimization.</p>
                     </div>
 
-                    <div class="publication">
-                        <h4 class="pub-title">Real-time Data Processing at Scale: Patterns and Practices</h4>
-                        <p class="pub-authors">Sumit Sah, Michael Chen</p>
-                        <p class="pub-venue">Journal of Distributed Computing, Vol. 15, 2023</p>
-                        <p class="pub-description">An extensive study of real-time data processing patterns, with practical implementations and performance benchmarks across different streaming platforms.</p>
+                    <div class="team-member">
+                        <h4 class="member-name">Alex Chen</h4>
+                        <p class="member-role">Software Engineer</p>
+                        <p class="member-description">Specializes in frontend architecture and user experience optimization. Previously at Google.</p>
                     </div>
 
-                    <div class="publication">
-                        <h4 class="pub-title">Machine Learning Model Deployment in Production: A Systematic Approach</h4>
-                        <p class="pub-authors">Sumit Sah, Dr. Sarah Williams, Alex Kumar</p>
-                        <p class="pub-venue">Conference on Machine Learning Systems, 2023</p>
-                        <p class="pub-description">A comprehensive framework for deploying and monitoring machine learning models in production environments with focus on reliability and scalability.</p>
+                    <div class="team-member">
+                        <h4 class="member-name">Maria Rodriguez</h4>
+                        <p class="member-role">Machine Learning Engineer</p>
+                        <p class="member-description">Expert in MLOps and production ML systems. MS in Computer Science from Stanford.</p>
                     </div>
 
-                    <h3 class="section-title">Current Projects</h3>
-                    <p>I am currently working on several research projects that bridge the gap between academic research and industry applications. These projects involve collaboration with leading technology companies and academic institutions, focusing on next-generation distributed systems and AI integration patterns.</p>
+                    <h3 class="section-title">Alumni</h3>
+                    
+                    <div class="alumni-member">
+                        <h4 class="member-name">John Smith</h4>
+                        <p class="member-description">Now Senior Engineer at Microsoft Azure (2021-2023)</p>
+                    </div>
+
+                    <div class="alumni-member">
+                        <h4 class="member-name">Lisa Wang</h4>
+                        <p class="member-description">Now Tech Lead at Amazon Web Services (2020-2022)</p>
+                    </div>
+
+                    <h3 class="section-title">Collaboration Opportunities</h3>
+                    <p>We welcome collaborations with academic institutions, industry partners, and open-source communities. If you're interested in working with us on challenging problems in distributed systems, cloud computing, or ML infrastructure, please <a href="contact.html" class="link">get in touch</a>.</p>
                 </div>
             </div>
         </div>
