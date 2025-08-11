@@ -3,9 +3,9 @@
 const SITE_CONFIG = {
     // Personal Information - EDIT THESE VALUES
     name: "Sumit Sah",
-    title: "Senior Software Engineer", 
-    affiliation: "Tech Innovation Lab",
-    email: "sumit.sah@example.com",
+    title: "Senior Reasearch Fellow", 
+    affiliation: "Indian Institute of Technology Dharwad, India",
+    email: "sumit.sah1824@gmail.com",
     
     // Social Media Links - EDIT THESE URLs
     social: {
