@@ -1,197 +1,246 @@
 # Sumit Sah - Professional Website
 
-A clean, professional personal website inspired by academic portfolios, built for GitHub Pages deployment.
+A clean, professional personal website with a template system that allows you to update all pages by editing just one file.
 
-## Live Preview
+## 🌐 **Live Website**
 Your website will be available at: `https://sum-iit.github.io`
 
-## Directory Structure
+## ✨ **Key Features**
+
+- **🎯 One-File Updates**: Change your name, email, and social links in one place - updates all pages automatically
+- **🎨 Professional Design**: Clean, academic-style layout inspired by surbhigoel.com
+- **📱 Mobile Responsive**: Looks great on desktop, tablet, and mobile devices
+- **⚡ Fast Loading**: Minimal, optimized code for quick performance
+- **🔗 Social Integration**: Google Scholar, LinkedIn, and YouTube links
+- **🚀 Easy Maintenance**: No more copy-paste errors or duplicate content
+
+## 📁 **File Structure**
 
 ```
 sum-iit.github.io/
-├── index.html              # About page (main)
+├── index.html              # About page
 ├── research.html           # Research & publications
-├── group.html              # Team & collaborations  
+├── group.html              # Team & collaborations
 ├── teaching.html           # Teaching & mentorship
 ├── activities.html         # Professional activities
 ├── blog.html              # Blog & articles
 ├── contact.html           # Contact information
-├── assets/
-│   ├── css/
-│   │   └── style.css      # Clean, minimal stylesheet
-│   ├── js/
-│   │   └── script.js      # Simple interactions
-│   ├── images/
-│   │   └── profile.jpg    # Your profile photo (add this)
-│   └── files/
-│       └── resume.pdf     # Your CV/resume (add this)
-└── README.md              # Documentation
+├── README.md              # This file
+└── assets/
+    ├── css/
+    │   └── style.css      # Main stylesheet
+    ├── js/
+    │   ├── config.js      # ⭐ EDIT THIS FILE TO UPDATE ALL PAGES
+    │   └── script.js      # Interactive functionality
+    ├── images/
+    │   └── profile.jpg    # Your profile photo (add this)
+    └── files/
+        └── resume.pdf     # Your resume/CV (add this)
 ```
 
-## Design Features
+## 🚀 **Quick Setup**
 
-✨ **Clean & Professional Design**
-- Inspired by academic websites like surbhigoel.com
-- Black background with blue header (matches original)
-- Clean typography using Inter font
-- Minimal, distraction-free layout
+### 1. **Create GitHub Repository**
+- Repository name: `sum-iit.github.io` (must be exact)
+- Make it public
 
-🎯 **Key Design Elements**
-- Sticky blue navigation header
-- Two-column layout: profile sidebar + main content
-- Professional color scheme: black, white, blue accents
-- Consistent spacing and typography
-- Mobile-responsive design
+### 2. **Upload Files**
+Upload all files maintaining the folder structure above.
 
-📱 **Mobile Optimized**
-- Single-column layout on mobile devices
-- Readable typography on all screen sizes
-- Touch-friendly navigation
+### 3. **Add Your Content**
+- Add your profile photo: `assets/images/profile.jpg`
+- Add your resume: `assets/files/resume.pdf`
+- Edit `assets/js/config.js` with your information
 
-## Quick Setup
-
-### 1. Create GitHub Repository
-```bash
-# Repository name MUST be exactly:
-sum-iit.github.io
-```
-
-### 2. Upload Files
-Upload all HTML files to the root directory:
-- `index.html`
-- `research.html` 
-- `group.html`
-- `teaching.html`
-- `activities.html`
-- `blog.html`
-- `contact.html`
-
-Create the assets folder structure and upload:
-- `assets/css/style.css`
-- `assets/js/script.js`
-
-### 3. Add Your Content
-
-**Profile Photo:**
-- Add your photo as `assets/images/profile.jpg`
-- Recommended size: 500x500px or larger, square aspect ratio
-- The site will automatically show your initials if no photo is found
-
-**Personal Information:**
-Replace placeholder content in all HTML files:
-- Your name, title, and affiliation
-- Email address and contact information
-- Bio and background information
-- Research interests and publications
-- Work experience and projects
-
-**Resume/CV:**
-- Add your resume as `assets/files/resume.pdf`
-- Update the link in the about section
-
-### 4. Enable GitHub Pages
-1. Go to your repository settings
-2. Navigate to "Pages" in the sidebar
+### 4. **Enable GitHub Pages**
+1. Go to repository Settings
+2. Click "Pages" in sidebar
 3. Select "Deploy from a branch"
 4. Choose "main" branch and "/ (root)" folder
 5. Click "Save"
 
-Your site will be live within 5-10 minutes!
+Your site will be live in 5-10 minutes!
 
-## Customization Guide
+## 🔧 **Customization**
 
-### Content Updates
+### **🎯 One File Controls Everything**
 
-**Navigation Sections:**
-- **About** - Your bio and background
-- **Research** - Publications and research interests  
-- **Group** - Team members and collaborations
-- **Teaching** - Courses and mentorship activities
-- **Activities** - Professional activities and awards
-- **Blog** - Articles and thought leadership
-- **Contact** - Contact information and office hours
+Edit **ONLY** this section in `assets/js/config.js`:
 
-**Common Updates:**
-1. Replace "Sumit Sah" with your name in all files
-2. Update "Senior Software Engineer" with your title
-3. Replace "Tech Innovation Lab" with your organization
-4. Change email from "sumit.sah@example.com" to your email
-5. Update all social media and professional links
+```javascript
+const SITE_CONFIG = {
+    // Personal Information - EDIT THESE VALUES
+    name: "Sumit Sah",                              // ← Your name
+    title: "Senior Software Engineer",              // ← Your job title
+    affiliation: "Tech Innovation Lab",             // ← Your company/organization
+    email: "sumit.sah@example.com",                // ← Your email address
+    
+    // Social Media Links - EDIT THESE URLs
+    social: {
+        googleScholar: "https://scholar.google.com/citations?user=your-id",
+        linkedin: "https://linkedin.com/in/your-username", 
+        youtube: "https://youtube.com/@your-channel"
+    }
+};
+```
 
-### Design Customization
+### **What Updates Automatically:**
+- ✅ Your name in header and profile
+- ✅ Job title and affiliation
+- ✅ Email address
+- ✅ All social media links
+- ✅ Navigation menu
 
-**Colors (in style.css):**
+### **To Add More Social Links:**
+Add to the `social` section in `config.js`:
+```javascript
+social: {
+    googleScholar: "your-url",
+    linkedin: "your-url",
+    youtube: "your-url",
+    twitter: "your-twitter-url",        // ← Add new social link
+    github: "your-github-url"           // ← Add another one
+}
+```
+
+Then update the template code to display them.
+
+## 📝 **Content Management**
+
+### **Page-Specific Content**
+Each HTML file contains only its unique content in the `<div class="bio-section">` area. Edit these sections to customize:
+
+- **index.html** - Your bio and background
+- **research.html** - Publications and research interests
+- **group.html** - Team members and collaborations
+- **teaching.html** - Courses and educational activities
+- **activities.html** - Professional activities and awards
+- **blog.html** - Blog posts and articles
+- **contact.html** - Contact information and office hours
+
+### **Adding New Pages**
+1. Create new HTML file using the same template structure
+2. Add the page to navigation in `config.js`
+3. Add unique content in the bio-section
+
+## 🎨 **Design Customization**
+
+### **Colors** (edit in `style.css`):
 - Header blue: `#2c5aa0`
 - Link blue: `#4a9eff`
 - Background: `#000` (black)
 - Text: `#fff` (white)
 
-**Typography:**
-- Main font: Inter (Google Fonts)
+### **Typography**:
+- Main font: Inter (loaded from Google Fonts)
 - Professional, clean appearance
-- Consistent hierarchy and spacing
+- Consistent hierarchy
 
-**Layout:**
-- Desktop: Two-column (sidebar + content)
-- Mobile: Single-column stack
-- Sticky navigation and profile section
+## 📱 **Mobile Responsiveness**
 
-### Adding Content
+The website automatically adapts to different screen sizes:
+- **Desktop**: Two-column layout (profile sidebar + content)
+- **Tablet**: Responsive single-column layout
+- **Mobile**: Optimized for touch interaction
 
-**Publications:**
-Add new publications in `research.html`:
-```html
-<div class="publication">
-    <h4 class="pub-title">Your Paper Title</h4>
-    <p class="pub-authors">Author Names</p>
-    <p class="pub-venue">Conference/Journal Name, Year</p>
-    <p class="pub-description">Brief description of the work.</p>
-</div>
-```
+## 🔍 **SEO & Performance**
 
-**Blog Posts:**
-Add new posts in `blog.html`:
-```html
-<article class="blog-post">
-    <h4 class="post-title"><a href="#" class="link">Post Title</a></h4>
-    <p class="post-meta">Date</p>
-    <p class="post-excerpt">Brief excerpt of the post content.</p>
-</article>
-```
+- **Clean URLs**: Professional structure
+- **Fast Loading**: Minimal CSS and JavaScript
+- **Semantic HTML**: Proper heading hierarchy
+- **Meta Tags**: Optimized for search engines
+- **Mobile-First**: Google-friendly responsive design
 
-## Technical Details
+## 📊 **Browser Support**
 
-**Browser Support:**
 - Chrome 60+
-- Firefox 60+  
+- Firefox 60+
 - Safari 12+
 - Edge 79+
 
-**Performance:**
-- Minimal CSS and JavaScript
-- Fast loading times
-- Optimized for GitHub Pages
+## 🛠️ **Development**
 
-**SEO:**
-- Semantic HTML structure
-- Proper meta tags
-- Clean URL structure
+### **Local Testing**
+1. Download all files
+2. Open any HTML file in a browser
+3. Test navigation and responsiveness
+4. Make changes and refresh to see updates
 
-## Tips for Success
+### **Making Changes**
+1. Edit `config.js` for personal information
+2. Edit individual HTML files for page content
+3. Edit `style.css` for design changes
+4. Commit and push to GitHub - changes deploy automatically
 
-1. **Keep it Simple:** Focus on clean, professional content
-2. **Regular Updates:** Keep your publications and experience current
-3. **Professional Photos:** Use high-quality, professional headshots
-4. **Consistent Branding:** Maintain consistent information across all platforms
-5. **Mobile Testing:** Always test on mobile devices
+## 🎯 **Best Practices**
 
-## Support
+### **Content Guidelines**
+- Keep descriptions professional and concise
+- Use consistent formatting across pages
+- Update publication dates and information regularly
+- Maintain professional tone throughout
 
-For questions about setup or customization:
-1. Check GitHub Pages documentation
-2. Review the code comments in the files
-3. Test changes locally before pushing to GitHub
+### **Image Guidelines**
+- **Profile photo**: 500x500px minimum, square aspect ratio
+- **High quality**: Professional headshot recommended
+- **File format**: JPG or PNG
+- **File size**: Under 1MB for fast loading
+
+### **Link Management**
+- Test all external links regularly
+- Use HTTPS URLs when available
+- Update social media links when profiles change
+
+## 🔒 **Security & Privacy**
+
+- No sensitive data stored in code
+- External links open in new tabs
+- Professional email only (no personal information)
+- Social links under your control
+
+## 📚 **Troubleshooting**
+
+### **Common Issues**
+
+**Double Headers Appearing**
+- Remove old header HTML from files
+- Ensure only `config.js` and `script.js` are loaded
+
+**Profile Photo Not Showing**
+- Check file path: `assets/images/profile.jpg`
+- Verify image file exists and is named correctly
+- Fallback initials will show if image fails
+
+**Social Links Not Working**
+- Verify URLs are complete (include https://)
+- Check for typos in `config.js`
+- Ensure proper URL format
+
+**Pages Not Loading**
+- Check file names match navigation links
+- Verify all files uploaded to GitHub
+- Check GitHub Pages is enabled
+
+## 📞 **Support**
+
+For technical issues:
+1. Check this README first
+2. Verify file structure matches the guide
+3. Test locally before deploying
+4. Check browser console for JavaScript errors
+
+## 📄 **License**
+
+This project is open source and available under the MIT License.
 
 ---
 
-**Remember:** This is your professional presence online. Keep content accurate, up-to-date, and professionally appropriate.
+## 🎉 **You're All Set!**
+
+Your professional website is now ready to deploy. Remember:
+- **Edit once in `config.js`** - changes everywhere
+- **Keep content professional** and up-to-date
+- **Test on mobile** devices regularly
+- **Update regularly** with new achievements and projects
+
+**Happy coding!** 🚀
