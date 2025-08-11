@@ -36,7 +36,7 @@ function loadTemplate() {
     const headerHTML = `
         <header class="header">
             <div class="container">
-                <a href="index.html" class="site-title">${SITE_CONFIG.name}</a>
+                <a href="/" class="site-title">${SITE_CONFIG.name}</a>
                 <nav class="nav">
                     ${SITE_CONFIG.navigation.map(item => 
                         `<a href="${item.href}" class="nav-link ${item.page === currentPage ? 'active' : ''}">${item.text}</a>`
@@ -49,14 +49,14 @@ function loadTemplate() {
     // Create profile section
     const profileHTML = `
         <div class="profile-section">
-            <a href="index.html" class="profile-image-link">
+            <a href="/" class="profile-image-link">
                 <div class="profile-image">
                     <img src="assets/images/profile.jpg" alt="${SITE_CONFIG.name}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
                     <div class="profile-placeholder">SS</div>
                 </div>
             </a>
             <div class="profile-info">
-                <a href="index.html" class="profile-name-link">
+                <a href="/" class="profile-name-link">
                     <h2 class="profile-name">${SITE_CONFIG.name}</h2>
                 </a>
                 <p class="profile-title">${SITE_CONFIG.title}</p>
