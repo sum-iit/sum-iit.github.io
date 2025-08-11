@@ -6,94 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Sumit Sah</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Sumit Sah</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">Sumit Sah</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">About</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="group.html" class="nav-link">Group</a>
+                <a href="teaching.html" class="nav-link">Teaching</a>
+                <a href="activities.html" class="nav-link">Activities</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <div class="profile-image">
-                <div class="profile-placeholder">SS</div>
-            </div>
-            
-            <h1 class="profile-name">Sumit Sah</h1>
-            <div class="profile-title">Software Engineer</div>
-            <div class="profile-institution">Technology Professional</div>
-            <a href="mailto:sumitsah@example.com" class="profile-email">sumitsah@example.com</a>
-        </div>
-
-        <!-- Content Section -->
-        <div class="content-section">
-            <h2 class="page-title">Contact</h2>
-            
-            <section>
-                <p>I'm always interested in discussing new opportunities, collaborating on interesting projects, or simply connecting with fellow developers and tech enthusiasts. Feel free to reach out through any of the channels below.</p>
-            </section>
-
-            <section>
-                <h3>Get in Touch</h3>
-                <div class="contact-methods">
-                    <div class="contact-item">
-                        <h4>Email</h4>
-                        <p><a href="mailto:sumitsah@example.com">sumitsah@example.com</a></p>
-                        <p>For professional inquiries, collaboration opportunities, or general questions.</p>
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="assets/images/profile.jpg" alt="Sumit Sah" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="profile-placeholder">SS</div>
                     </div>
-
-                    <div class="contact-item">
-                        <h4>LinkedIn</h4>
-                        <p><a href="https://linkedin.com/in/sumitsah" target="_blank">linkedin.com/in/sumitsah</a></p>
-                        <p>Connect with me for professional networking and career discussions.</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <h4>GitHub</h4>
-                        <p><a href="https://github.com/sumitsah" target="_blank">github.com/sumitsah</a></p>
-                        <p>Check out my code, contribute to projects, or start a technical discussion.</p>
-                    </div>
-
-                    <div class="contact-item">
-                        <h4>Twitter</h4>
-                        <p><a href="https://twitter.com/sumitsah" target="_blank">@sumitsah</a></p>
-                        <p>Follow me for tech updates, thoughts on software development, and industry insights.</p>
+                    <div class="profile-info">
+                        <h2 class="profile-name">Sumit Sah</h2>
+                        <p class="profile-title">Senior Software Engineer</p>
+                        <p class="profile-affiliation">Tech Innovation Lab</p>
+                        <a href="mailto:sumit.sah@example.com" class="profile-email">sumit.sah@example.com</a>
                     </div>
                 </div>
-            </section>
 
-            <section>
-                <h3>Speaking & Consulting</h3>
-                <p>I'm available for speaking engagements at conferences, meetups, and corporate events. I also provide consulting services for web development projects, architecture reviews, and technical strategy planning.</p>
-                
-                <p>Topics I frequently speak about include:</p>
-                <ul>
-                    <li>Modern JavaScript frameworks and best practices</li>
-                    <li>Scalable web application architecture</li>
-                    <li>Performance optimization techniques</li>
-                    <li>Team collaboration and code quality</li>
-                </ul>
-            </section>
+                <div class="bio-section">
+                    <h3 class="section-title">Contact Information</h3>
+                    <p>I'm always interested in discussing new opportunities, collaborating on research projects, or connecting with fellow engineers and researchers. Please feel free to reach out through any of the channels below.</p>
 
-            <section>
-                <h3>Response Time</h3>
-                <p>I typically respond to emails within 24-48 hours during business days. For urgent matters, please mention "URGENT" in your subject line.</p>
-            </section>
+                    <div class="contact-section">
+                        <h4 class="contact-method">Email</h4>
+                        <p><a href="mailto:sumit.sah@example.com" class="link">sumit.sah@example.com</a></p>
+                        <p>For professional inquiries, collaboration proposals, and research discussions.</p>
+                    </div>
+
+                    <div class="contact-section">
+                        <h4 class="contact-method">Office</h4>
+                        <p>Tech Innovation Lab<br>
+                        123 Innovation Drive, Suite 456<br>
+                        San Francisco, CA 94105</p>
+                    </div>
+
+                    <div class="contact-section">
+                        <h4 class="contact-method">Professional Networks</h4>
+                        <ul class="contact-links">
+                            <li><a href="https://linkedin.com/in/sumitsah" class="link" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/sumitsah" class="link" target="_blank">GitHub</a></li>
+                            <li><a href="https://twitter.com/sumitsah" class="link" target="_blank">Twitter</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=sumitsah" class="link" target="_blank">Google Scholar</a></li>
+                        </ul>
+                    </div>
+
+                    <h3 class="section-title">Speaking & Consulting</h3>
+                    <p>I am available for:</p>
+                    <ul class="services-list">
+                        <li>Conference speaking and keynote presentations</li>
+                        <li>Technical workshops and training sessions</li>
+                        <li>Architecture reviews and technical consulting</li>
+                        <li>Research collaborations and joint projects</li>
+                        <li>Mentorship and career guidance</li>
+                    </ul>
+
+                    <p>For speaking engagements or consulting inquiries, please include details about the event, audience, and timeline in your initial contact.</p>
+
+                    <h3 class="section-title">Office Hours</h3>
+                    <p>I hold virtual office hours for students and early-career engineers:</p>
+                    <ul class="office-hours">
+                        <li><strong>When:</strong> Fridays, 2:00 PM - 4:00 PM PST</li>
+                        <li><strong>Format:</strong> 30-minute video calls</li>
+                        <li><strong>Topics:</strong> Career advice, technical questions, research guidance</li>
+                        <li><strong>Booking:</strong> <a href="mailto:sumit.sah@example.com" class="link">Email me</a> to schedule</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 
     <script src="assets/js/script.js"></script>
 </body>
