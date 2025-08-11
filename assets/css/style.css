@@ -152,20 +152,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile-social {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
     margin: 1rem 0;
 }
 
 .social-link {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+    color: #4a9eff;
     text-decoration: none;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    opacity: 0.8;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .social-link:hover {
-    transform: scale(1.2);
-    opacity: 1;
+    color: #90caf9;
+    text-decoration: none;
 }
 
 .profile-name {
