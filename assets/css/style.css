@@ -48,6 +48,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.5rem;
     font-weight: 300;
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-title:hover {
+    color: #a8c8ec;
 }
 
 .nav {
@@ -94,6 +99,16 @@ h1, h2, h3, h4, h5, h6 {
     top: 6rem;
 }
 
+.profile-image-link {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.profile-image-link:hover {
+    transform: translateY(-2px);
+}
+
 .profile-image {
     width: 250px;
     height: 250px;
@@ -124,6 +139,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile-info {
     text-align: left;
+}
+
+.profile-name-link {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.profile-name-link:hover .profile-name {
+    color: #a8c8ec;
 }
 
 .profile-name {
