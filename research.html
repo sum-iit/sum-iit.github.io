@@ -6,74 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - Sumit Sah</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Sumit Sah</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">About</a></li>
-                <li><a href="research.html" class="active">Research</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">Sumit Sah</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">About</a>
+                <a href="research.html" class="nav-link active">Research</a>
+                <a href="group.html" class="nav-link">Group</a>
+                <a href="teaching.html" class="nav-link">Teaching</a>
+                <a href="activities.html" class="nav-link">Activities</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <div class="profile-image">
-                <div class="profile-placeholder">SS</div>
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="assets/images/profile.jpg" alt="Sumit Sah" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="profile-placeholder">SS</div>
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-name">Sumit Sah</h2>
+                        <p class="profile-title">Senior Software Engineer</p>
+                        <p class="profile-affiliation">Tech Innovation Lab</p>
+                        <a href="mailto:sumit.sah@example.com" class="profile-email">sumit.sah@example.com</a>
+                    </div>
+                </div>
+
+                <div class="bio-section">
+                    <h3 class="section-title">Research Interests</h3>
+                    <p>My research focuses on the intersection of software engineering and distributed systems. I am particularly interested in:</p>
+                    <ul class="research-list">
+                        <li>Scalable web architecture patterns and microservices design</li>
+                        <li>Performance optimization in cloud-native applications</li>
+                        <li>Machine learning integration in production systems</li>
+                        <li>Real-time data processing and stream computing</li>
+                    </ul>
+
+                    <h3 class="section-title">Publications</h3>
+                    
+                    <div class="publication">
+                        <h4 class="pub-title">Optimizing Microservices Performance in Cloud Environments</h4>
+                        <p class="pub-authors">Sumit Sah, Jane Smith, Robert Johnson</p>
+                        <p class="pub-venue">Proceedings of the International Conference on Software Engineering, 2024</p>
+                        <p class="pub-description">This paper presents novel optimization techniques for microservices architectures deployed in cloud environments, achieving up to 40% improvement in response times.</p>
+                    </div>
+
+                    <div class="publication">
+                        <h4 class="pub-title">Real-time Data Processing at Scale: Patterns and Practices</h4>
+                        <p class="pub-authors">Sumit Sah, Michael Chen</p>
+                        <p class="pub-venue">Journal of Distributed Computing, Vol. 15, 2023</p>
+                        <p class="pub-description">An extensive study of real-time data processing patterns, with practical implementations and performance benchmarks across different streaming platforms.</p>
+                    </div>
+
+                    <div class="publication">
+                        <h4 class="pub-title">Machine Learning Model Deployment in Production: A Systematic Approach</h4>
+                        <p class="pub-authors">Sumit Sah, Dr. Sarah Williams, Alex Kumar</p>
+                        <p class="pub-venue">Conference on Machine Learning Systems, 2023</p>
+                        <p class="pub-description">A comprehensive framework for deploying and monitoring machine learning models in production environments with focus on reliability and scalability.</p>
+                    </div>
+
+                    <h3 class="section-title">Current Projects</h3>
+                    <p>I am currently working on several research projects that bridge the gap between academic research and industry applications. These projects involve collaboration with leading technology companies and academic institutions, focusing on next-generation distributed systems and AI integration patterns.</p>
+                </div>
             </div>
-            
-            <h1 class="profile-name">Sumit Sah</h1>
-            <div class="profile-title">Software Engineer</div>
-            <div class="profile-institution">Technology Professional</div>
-            <a href="mailto:sumitsah@example.com" class="profile-email">sumitsah@example.com</a>
         </div>
-
-        <!-- Content Section -->
-        <div class="content-section">
-            <h2 class="page-title">Research</h2>
-            
-            <section>
-                <h3>Research Interests</h3>
-                <p>My research focuses on the intersection of software engineering and emerging technologies. I'm particularly interested in:</p>
-                <ul>
-                    <li><strong>Web Performance Optimization</strong> - Developing techniques to improve application speed and user experience</li>
-                    <li><strong>Scalable Architecture Design</strong> - Creating systems that can handle growth efficiently</li>
-                    <li><strong>AI-Powered Development Tools</strong> - Exploring how artificial intelligence can enhance the development process</li>
-                    <li><strong>Modern JavaScript Frameworks</strong> - Investigating best practices and performance patterns</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Publications</h3>
-                <div class="publication">
-                    <h4>"Optimizing React Applications for Large-Scale Deployment"</h4>
-                    <p class="publication-meta">Conference on Modern Web Technologies, 2024</p>
-                    <p>This paper explores advanced optimization techniques for React applications in enterprise environments, focusing on bundle size reduction and runtime performance improvements.</p>
-                </div>
-
-                <div class="publication">
-                    <h4>"Microservices Architecture Patterns for E-commerce Platforms"</h4>
-                    <p class="publication-meta">Journal of Software Engineering, 2023</p>
-                    <p>A comprehensive study of microservices implementation patterns specifically tailored for high-traffic e-commerce applications.</p>
-                </div>
-            </section>
-
-            <section>
-                <h3>Current Projects</h3>
-                <p>I'm currently working on several research projects that aim to bridge the gap between theoretical computer science concepts and practical software development challenges. These projects involve collaboration with industry partners and academic institutions.</p>
-            </section>
-        </div>
-    </div>
+    </main>
 
     <script src="assets/js/script.js"></script>
 </body>
