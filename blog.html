@@ -6,76 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Sumit Sah</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Sumit Sah</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">Sumit Sah</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">About</a>
+                <a href="research.html" class="nav-link">Research</a>
+                <a href="group.html" class="nav-link">Group</a>
+                <a href="teaching.html" class="nav-link">Teaching</a>
+                <a href="activities.html" class="nav-link">Activities</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Profile Section -->
-        <div class="profile-section">
-            <div class="profile-image">
-                <div class="profile-placeholder">SS</div>
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="assets/images/profile.jpg" alt="Sumit Sah" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="profile-placeholder">SS</div>
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-name">Sumit Sah</h2>
+                        <p class="profile-title">Senior Software Engineer</p>
+                        <p class="profile-affiliation">Tech Innovation Lab</p>
+                        <a href="mailto:sumit.sah@example.com" class="profile-email">sumit.sah@example.com</a>
+                    </div>
+                </div>
+
+                <div class="bio-section">
+                    <h3 class="section-title">Recent Posts</h3>
+                    
+                    <article class="blog-post">
+                        <h4 class="post-title"><a href="#" class="link">Building Scalable React Applications: Lessons from Production</a></h4>
+                        <p class="post-meta">March 15, 2024</p>
+                        <p class="post-excerpt">In this post, I share key insights from building and maintaining large-scale React applications in production environments. We explore performance optimization techniques, state management patterns, and architectural decisions that have proven effective.</p>
+                    </article>
+
+                    <article class="blog-post">
+                        <h4 class="post-title"><a href="#" class="link">Microservices Communication Patterns: A Practical Guide</a></h4>
+                        <p class="post-meta">February 28, 2024</p>
+                        <p class="post-excerpt">A comprehensive look at different communication patterns in microservices architectures, including synchronous and asynchronous patterns, event-driven designs, and when to use each approach.</p>
+                    </article>
+
+                    <article class="blog-post">
+                        <h4 class="post-title"><a href="#" class="link">The Evolution of JavaScript: From ES6 to Modern Development</a></h4>
+                        <p class="post-meta">January 20, 2024</p>
+                        <p class="post-excerpt">Exploring how JavaScript has evolved over the years and how modern features are changing the way we build web applications. Includes practical examples and migration strategies.</p>
+                    </article>
+
+                    <article class="blog-post">
+                        <h4 class="post-title"><a href="#" class="link">Database Performance Optimization in Cloud Environments</a></h4>
+                        <p class="post-meta">December 10, 2023</p>
+                        <p class="post-excerpt">Practical techniques for optimizing database performance in cloud-native applications, including query optimization, connection pooling, and caching strategies with real-world benchmarks.</p>
+                    </article>
+
+                    <article class="blog-post">
+                        <h4 class="post-title"><a href="#" class="link">DevOps Best Practices for Modern Web Applications</a></h4>
+                        <p class="post-meta">November 15, 2023</p>
+                        <p class="post-excerpt">A detailed guide to implementing DevOps practices for web applications, covering CI/CD pipelines, infrastructure as code, monitoring, and security considerations.</p>
+                    </article>
+
+                    <h3 class="section-title">External Publications</h3>
+                    <p>I also write for various technical publications and platforms:</p>
+                    <ul class="external-links">
+                        <li><a href="#" class="link">Medium</a> - Technical deep-dives and industry insights</li>
+                        <li><a href="#" class="link">Dev.to</a> - Tutorials and programming tips</li>
+                        <li><a href="#" class="link">CSS-Tricks</a> - Frontend development articles</li>
+                        <li><a href="#" class="link">Smashing Magazine</a> - Web development best practices</li>
+                    </ul>
+                </div>
             </div>
-            
-            <h1 class="profile-name">Sumit Sah</h1>
-            <div class="profile-title">Software Engineer</div>
-            <div class="profile-institution">Technology Professional</div>
-            <a href="mailto:sumitsah@example.com" class="profile-email">sumitsah@example.com</a>
         </div>
-
-        <!-- Content Section -->
-        <div class="content-section">
-            <h2 class="page-title">Blog</h2>
-            
-            <article class="blog-post">
-                <h3><a href="#" class="blog-title">Building Scalable React Applications: Lessons from Production</a></h3>
-                <p class="blog-meta">March 15, 2024 • 8 min read</p>
-                <p>In this post, I share key insights from building and maintaining large-scale React applications in production environments. We'll explore performance optimization techniques, state management patterns, and architectural decisions that have proven effective in real-world scenarios.</p>
-                <a href="#" class="read-more">Read more →</a>
-            </article>
-
-            <article class="blog-post">
-                <h3><a href="#" class="blog-title">The Future of Web Development: Emerging Trends and Technologies</a></h3>
-                <p class="blog-meta">February 28, 2024 • 6 min read</p>
-                <p>An exploration of the latest trends shaping web development, including WebAssembly, Progressive Web Apps, and the impact of AI on development workflows. This post discusses how these technologies will transform the way we build web applications.</p>
-                <a href="#" class="read-more">Read more →</a>
-            </article>
-
-            <article class="blog-post">
-                <h3><a href="#" class="blog-title">Microservices vs Monoliths: Choosing the Right Architecture</a></h3>
-                <p class="blog-meta">January 20, 2024 • 10 min read</p>
-                <p>A detailed comparison of microservices and monolithic architectures, discussing the trade-offs, when to choose each approach, and real-world examples from my experience implementing both patterns in different projects.</p>
-                <a href="#" class="read-more">Read more →</a>
-            </article>
-
-            <article class="blog-post">
-                <h3><a href="#" class="blog-title">Optimizing Database Performance in Node.js Applications</a></h3>
-                <p class="blog-meta">December 10, 2023 • 7 min read</p>
-                <p>Practical techniques for improving database performance in Node.js applications, including query optimization, connection pooling, and caching strategies. Includes code examples and performance benchmarks.</p>
-                <a href="#" class="read-more">Read more →</a>
-            </article>
-
-            <section>
-                <h3>Writing Elsewhere</h3>
-                <p>I also contribute to various tech publications and community blogs. You can find my articles on <a href="#" target="_blank">Medium</a>, <a href="#" target="_blank">Dev.to</a>, and other developer-focused platforms.</p>
-            </section>
-        </div>
-    </div>
+    </main>
 
     <script src="assets/js/script.js"></script>
 </body>
