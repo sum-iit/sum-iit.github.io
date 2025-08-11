@@ -158,13 +158,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-link {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #4a9eff;
     text-decoration: none;
     transition: color 0.2s ease;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 .social-link:hover {
