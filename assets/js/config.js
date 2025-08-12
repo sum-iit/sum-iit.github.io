@@ -3,15 +3,15 @@
 const SITE_CONFIG = {
     // Personal Information - EDIT THESE VALUES
     name: "Sumit Sah",
-    title: "Senior Software Engineer", 
-    affiliation: "Tech Innovation Lab",
-    email: "sumit.sah@example.com",
+    title: "Senior Research Fellow", 
+    affiliation: "Indian Institute of Technology Dharwad, INDIA",
+    email: "sumit.sah1824@gmail.com",
     
     // Social Media Links - EDIT THESE URLs
     social: {
         googleScholar: "https://scholar.google.com/citations?user=your-google-scholar-id",
-        linkedin: "https://linkedin.com/in/your-linkedin-username", 
-        youtube: "https://youtube.com/@your-youtube-channel"
+        linkedin: "https://linkedin.com/in/sahsumit", 
+        youtube: "https://youtube.com/@sumIITDh"
     },
     
     // Navigation Menu - Add/remove pages here
