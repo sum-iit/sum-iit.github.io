@@ -592,6 +592,14 @@ li {
         display: block;
     }
 
+    .profile-info {
+        text-align: center; /* Center align all profile info on mobile */
+    }
+
+    .profile-social {
+        justify-content: center; /* Center the social links */
+    }
+
     .profile-image {
         width: 200px;
         height: 200px;
@@ -600,6 +608,20 @@ li {
 
     .profile-name {
         font-size: 1.8rem;
+        text-align: center; /* Center align name */
+    }
+
+    .profile-title {
+        text-align: center; /* Center align title */
+    }
+
+    .profile-affiliation {
+        text-align: center; /* Center align affiliation */
+    }
+
+    .profile-email {
+        text-align: center; /* Center align email */
+        display: block;
     }
 
     .profile-placeholder {
