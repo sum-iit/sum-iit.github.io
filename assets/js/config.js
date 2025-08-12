@@ -3,9 +3,9 @@
 const SITE_CONFIG = {
     // Personal Information - EDIT THESE VALUES
     name: "Sumit Sah",
-    title: "Senior Reasearch Fellow", 
-    affiliation: "Indian Institute of Technology Dharwad, India",
-    email: "sumit.sah1824@gmail.com",
+    title: "Senior Software Engineer", 
+    affiliation: "Tech Innovation Lab",
+    email: "sumit.sah@example.com",
     
     // Social Media Links - EDIT THESE URLs
     social: {
@@ -32,21 +32,27 @@ function loadTemplate() {
     const currentPath = window.location.pathname;
     const currentPage = currentPath.split('/').pop().replace('.html', '') || 'index';
     
-    // Create header
+    // Add home page class for conditional styling
+    if (currentPage === 'index' || currentPath === '/') {
+        document.body.classList.add('home-page');
+    }
+    
+    // Create header with mobile menu
     const headerHTML = `
         <header class="header">
             <div class="container">
                 <a href="/" class="site-title">${SITE_CONFIG.name}</a>
-                <nav class="nav">
+                <nav class="nav" id="navMenu">
                     ${SITE_CONFIG.navigation.map(item => 
                         `<a href="${item.href}" class="nav-link ${item.page === currentPage ? 'active' : ''}">${item.text}</a>`
                     ).join('')}
                 </nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             </div>
         </header>
     `;
     
-    // Create profile section
+    // Create profile section (will be hidden on mobile for non-home pages via CSS)
     const profileHTML = `
         <div class="profile-section">
             <a href="/" class="profile-image-link">
@@ -84,6 +90,45 @@ function loadTemplate() {
     const profileContainer = document.querySelector('.profile-section');
     if (profileContainer) {
         profileContainer.outerHTML = profileHTML;
+    }
+    
+    // Initialize mobile menu functionality
+    initializeMobileMenu();
+}
+
+// Mobile menu functionality
+function initializeMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            
+            // Change hamburger icon
+            if (navMenu.classList.contains('active')) {
+                mobileMenuBtn.textContent = '✕';
+            } else {
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!mobileMenuBtn.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
     }
 }
 
