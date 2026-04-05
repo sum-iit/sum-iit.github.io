@@ -12,11 +12,30 @@ html {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
+    font-family: 'Lora', Georgia, 'Times New Roman', serif;
+    line-height: 1.7;
     color: #333;
     background-color: #000;
     min-height: 100vh;
+}
+
+/* UI elements stay in Inter */
+.header, .nav, .nav-link, .site-title,
+.mobile-menu-btn,
+.profile-name, .profile-title, .profile-affiliation,
+.profile-email, .social-link,
+.section-title, .pub-title, .course-title, .member-name,
+.post-title, .post-date, .post-reading-time, .post-meta,
+.post-tag, .tag-btn, .tag-filter-label, .blog-intro, .blog-more-coming,
+.news-date, .news-sidebar-title,
+.pub-venue, .pub-authors, .course-details, .member-role,
+.activity-category, .contact-method,
+.toc, .toc *, .back-link,
+.thm-label, .proof-end,
+.pub-badge, .footer, .footer *,
+.post-page-meta, .post-page-title,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* Typography */
