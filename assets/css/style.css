@@ -878,6 +878,71 @@ li {
     border-top: 1px solid #1a1a1a;
 }
 
+/* ===================== HOMEPAGE 3-COLUMN LAYOUT ===================== */
+
+.home-container {
+    max-width: 1200px;
+}
+
+.home-wrapper {
+    grid-template-columns: 270px 1fr 220px;
+    gap: 3rem;
+}
+
+.news-sidebar {
+    position: sticky;
+    top: 6rem;
+    align-self: start;
+}
+
+.news-sidebar-title {
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #222;
+}
+
+/* Override news-list for sidebar (tighter, no flex row) */
+.news-sidebar .news-list {
+    margin: 0;
+}
+
+.news-sidebar .news-list li {
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.82rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #1a1a1a;
+    color: #bbb;
+    align-items: flex-start;
+}
+
+.news-sidebar .news-list li:last-child {
+    border-bottom: none;
+}
+
+.news-sidebar .news-date {
+    font-size: 0.75rem;
+    min-width: auto;
+}
+
+@media (max-width: 960px) {
+    .home-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .news-sidebar {
+        position: static;
+        border-top: 1px solid #222;
+        padding-top: 1.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
 /* ===================== NEWS LIST ===================== */
 .news-list {
     list-style: none;
