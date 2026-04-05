@@ -15,7 +15,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #000;
+    background-color: #1a1a1a;
     min-height: 100vh;
 }
 
@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Main content */
 .main {
-    background-color: #000;
+    background-color: #1a1a1a;
     min-height: calc(100vh - 80px);
     padding: 3rem 0;
 }
@@ -693,7 +693,7 @@ li {
 
 /* Table of contents */
 .toc {
-    background: #0c0c0c;
+    background: #111;
     border: 1px solid #1e1e1e;
     border-radius: 8px;
     padding: 1.1rem 1.4rem;
@@ -767,7 +767,7 @@ li {
     overflow-x: auto;
     margin: 1.75rem 0;
     padding: 1rem 1.25rem;
-    background: #080808;
+    background: #111;
     border-radius: 6px;
     border-left: 3px solid #2c5aa0;
 }
@@ -835,7 +835,7 @@ li {
 
 /* Proof — neutral */
 .thm-box-proof {
-    background: #0a0a0a;
+    background: #111;
     border-color: #2a2a2a;
     border-left-width: 2px;
 }
@@ -851,7 +851,7 @@ li {
 
 /* Code blocks */
 .post-content pre {
-    background: #080808;
+    background: #111;
     border: 1px solid #1a1a1a;
     border-radius: 6px;
     padding: 1rem 1.25rem;
