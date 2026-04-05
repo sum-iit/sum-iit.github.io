@@ -132,6 +132,32 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+// Blog tag filter
+function initTagFilter() {
+    const tagBtns = document.querySelectorAll('.tag-btn');
+    const posts = document.querySelectorAll('.blog-post[data-tags]');
+    if (!tagBtns.length || !posts.length) return;
+
+    tagBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            tagBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const selected = this.dataset.tag;
+            posts.forEach(post => {
+                const tags = post.dataset.tags || '';
+                if (selected === 'all' || tags.includes(selected)) {
+                    post.classList.remove('hidden');
+                } else {
+                    post.classList.add('hidden');
+                }
+            });
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initTagFilter);
+
 // Utility function to format dates
 function formatDate(dateString) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };

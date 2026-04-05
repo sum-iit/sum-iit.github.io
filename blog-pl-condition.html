@@ -1,0 +1,255 @@
+<!-- blog-pl-condition.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Polyak–Łojasiewicz Condition - Sumit Sah</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- MathJax -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        tags: 'ams',
+        macros: {
+          R: '\\mathbb{R}',
+          E: '\\mathbb{E}',
+          norm: ['\\|#1\\|', 1],
+          inner: ['\\langle #1, #2 \\rangle', 2]
+        }
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre']
+      }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="post-page">
+    <main class="main">
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="profile-section"></div>
+                <div class="bio-section">
+
+                    <!-- Back link -->
+                    <a href="blog.html" class="back-link">&#8592; Back to Blog</a>
+
+                    <!-- Post header -->
+                    <div class="post-page-header">
+                        <h1 class="post-page-title">The Polyak–Łojasiewicz Condition: A Gentle Introduction</h1>
+                        <div class="post-page-meta">
+                            <span>March 2025</span>
+                            <span>8 min read</span>
+                            <span class="post-tag">Optimization</span>
+                            <span class="post-tag">Online Learning</span>
+                        </div>
+                    </div>
+
+                    <!-- Table of contents -->
+                    <nav class="toc">
+                        <div class="toc-title">Contents</div>
+                        <ol>
+                            <li><a href="#motivation">Motivation</a></li>
+                            <li><a href="#definition">The PL Condition</a></li>
+                            <li><a href="#examples">Examples</a></li>
+                            <li><a href="#convergence">Linear Convergence of Gradient Descent</a></li>
+                            <li><a href="#vs-strong-convexity">Relation to Strong Convexity</a></li>
+                            <li><a href="#overparameterized">Why It Matters for Overparameterized Models</a></li>
+                        </ol>
+                    </nav>
+
+                    <!-- Post body -->
+                    <div class="post-content">
+
+                        <h2 id="motivation">1. Motivation</h2>
+                        <p>
+                            A central question in optimization is: under what conditions does gradient descent converge quickly?
+                            The classical answer invokes <em>strong convexity</em>. But many functions arising in modern machine learning —
+                            neural network loss landscapes, federated objectives, online losses — are far from convex.
+                        </p>
+                        <p>
+                            This raises a natural question: is strong convexity really necessary for fast convergence,
+                            or is it merely sufficient? The Polyak–Łojasiewicz (PL) condition, introduced independently
+                            by Boris Polyak (1963) and Stanisław Łojasiewicz (1963), gives a clean answer:
+                            <strong>no, strong convexity is not necessary</strong>.
+                            The PL condition is strictly weaker, yet it is enough to guarantee linear convergence of gradient descent.
+                        </p>
+
+                        <h2 id="definition">2. The PL Condition</h2>
+
+                        <div class="thm-box thm-box-definition">
+                            <span class="thm-label">Definition 1 (Polyak–Łojasiewicz Condition)</span>
+                            <p>
+                                A differentiable function $f : \R^d \to \R$ satisfies the <strong>PL condition</strong>
+                                with parameter $\mu > 0$ if for all $x \in \R^d$,
+                                $$\frac{1}{2}\|\nabla f(x)\|^2 \;\geq\; \mu\bigl(f(x) - f^*\bigr),$$
+                                where $f^* = \inf_{x} f(x)$ is the global minimum value.
+                            </p>
+                        </div>
+
+                        <p>
+                            The condition has a clean interpretation: <em>whenever you are not at a global minimum,
+                            the gradient must be large enough to "escape"</em>. More precisely, if $f(x) - f^*$ is large,
+                            then $\|\nabla f(x)\|$ must also be large — the gradient cannot vanish at a suboptimal point.
+                            This rules out the possibility of spurious stationary points, which are the bane of non-convex optimization.
+                        </p>
+
+                        <h2 id="examples">3. Examples</h2>
+
+                        <h3>3.1 Strongly Convex Functions</h3>
+                        <p>
+                            Every $\mu$-strongly convex function satisfies PL with the same $\mu$.
+                            Recall that $\mu$-strong convexity implies
+                            $f(y) \geq f(x) + \inner{\nabla f(x)}{y-x} + \frac{\mu}{2}\|y-x\|^2$ for all $x,y$.
+                            Minimizing the right side over $y$ gives
+                            $f^* \leq f(x) - \frac{1}{2\mu}\|\nabla f(x)\|^2$,
+                            which is exactly the PL inequality rearranged.
+                            The converse is false — PL does not imply strong convexity.
+                        </p>
+
+                        <h3>3.2 A Non-Convex PL Function</h3>
+                        <p>
+                            Consider $f(x_1, x_2) = x_1^2 + (x_2 - \sin x_1)^2$. This function is non-convex
+                            (it has a curved valley), but it satisfies the PL condition.
+                            The minimum value is $f^* = 0$, achieved along the curve $x_2 = \sin x_1$.
+                            On this set, $\nabla f = 0$, but away from it the gradient grows proportionally to the function value.
+                        </p>
+
+                        <h3>3.3 Overparameterized Linear Regression</h3>
+                        <p>
+                            Let $f(w) = \frac{1}{2}\|Xw - y\|^2$ where $X \in \R^{n \times d}$ with $d \geq n$ and $X$ has full row rank.
+                            Then $f^* = 0$ (the system is consistent), and a direct computation shows
+                            $$\|\nabla f(w)\|^2 = \|X^\top(Xw - y)\|^2 \geq \sigma_{\min}^2(X)\|Xw - y\|^2 = 2\sigma_{\min}^2(X)\,f(w),$$
+                            where $\sigma_{\min}(X)$ is the smallest nonzero singular value of $X$.
+                            So $f$ satisfies PL with $\mu = \sigma_{\min}^2(X)$.
+                        </p>
+
+                        <h2 id="convergence">4. Linear Convergence of Gradient Descent</h2>
+
+                        <div class="thm-box thm-box-theorem">
+                            <span class="thm-label">Theorem 1 (GD under PL)</span>
+                            <p>
+                                Let $f$ be $L$-smooth (i.e., $\|\nabla f(x) - \nabla f(y)\| \leq L\|x-y\|$ for all $x,y$)
+                                and satisfy the PL condition with parameter $\mu$. Then gradient descent with step size $\eta = 1/L$,
+                                $$x_{k+1} = x_k - \eta\,\nabla f(x_k),$$
+                                satisfies
+                                $$f(x_k) - f^* \;\leq\; \left(1 - \frac{\mu}{L}\right)^k \bigl(f(x_0) - f^*\bigr).$$
+                            </p>
+                        </div>
+
+                        <div class="thm-box thm-box-proof">
+                            <span class="thm-label">Proof</span>
+                            <p>
+                                By $L$-smoothness, one step of gradient descent satisfies the descent lemma:
+                                $$f(x_{k+1}) \;\leq\; f(x_k) - \frac{1}{2L}\|\nabla f(x_k)\|^2.$$
+                                Applying the PL condition $\frac{1}{2}\|\nabla f(x_k)\|^2 \geq \mu(f(x_k) - f^*)$:
+                                $$f(x_{k+1}) - f^* \;\leq\; f(x_k) - f^* - \frac{\mu}{L}(f(x_k) - f^*) \;=\; \left(1 - \frac{\mu}{L}\right)(f(x_k) - f^*).$$
+                                Applying this recursively from $k=0$ gives the result.
+                            </p>
+                            <div class="proof-end">&#9632;</div>
+                        </div>
+
+                        <p>
+                            The convergence rate $\left(1 - \mu/L\right)^k$ is identical to what one gets for strongly convex functions.
+                            The condition number $\kappa = L/\mu$ plays the same role. The key insight is that we only used the PL condition
+                            in the proof — convexity was never invoked.
+                        </p>
+
+                        <div class="thm-box thm-box-corollary">
+                            <span class="thm-label">Corollary 1</span>
+                            <p>
+                                Under the conditions of Theorem 1, to achieve $f(x_k) - f^* \leq \varepsilon$,
+                                gradient descent requires at most
+                                $k \geq \frac{L}{\mu}\log\frac{f(x_0) - f^*}{\varepsilon}$
+                                iterations.
+                            </p>
+                        </div>
+
+                        <h2 id="vs-strong-convexity">5. Relation to Strong Convexity</h2>
+                        <p>
+                            The hierarchy of conditions, from weakest to strongest, is roughly:
+                        </p>
+
+                        <div class="math-block">
+                            $$\text{PL condition} \;\impliedby\; \text{Quasi-strong convexity} \;\impliedby\; \text{Strong convexity}$$
+                        </div>
+
+                        <p>
+                            The PL condition does not require the function to be convex or to have a unique minimizer.
+                            A function satisfying PL may have a whole manifold of minimizers (as in the overparameterized regression example above),
+                            but GD will still find one of them at a linear rate.
+                        </p>
+
+                        <div class="thm-box thm-box-lemma">
+                            <span class="thm-label">Lemma 1</span>
+                            <p>
+                                If $f$ satisfies PL with parameter $\mu$ and is $L$-smooth, then every critical point
+                                $x$ with $\nabla f(x) = 0$ is a global minimum. In particular,
+                                $f(x) = f^*$ at every stationary point.
+                            </p>
+                        </div>
+
+                        <div class="thm-box thm-box-proof">
+                            <span class="thm-label">Proof</span>
+                            <p>
+                                If $\nabla f(x) = 0$, then the PL condition gives
+                                $0 = \frac{1}{2}\|\nabla f(x)\|^2 \geq \mu(f(x) - f^*) \geq 0$,
+                                so $f(x) = f^*$.
+                            </p>
+                            <div class="proof-end">&#9632;</div>
+                        </div>
+
+                        <h2 id="overparameterized">6. Why It Matters for Overparameterized Models</h2>
+                        <p>
+                            Modern neural networks are typically <em>overparameterized</em>: the number of parameters $d$
+                            far exceeds the number of training samples $n$. In this regime, the loss landscape is highly non-convex
+                            with many global minima, saddle points, and local structure.
+                        </p>
+                        <p>
+                            Yet empirically, gradient descent finds good solutions. The PL condition provides one explanation.
+                            Informally, overparameterization creates enough "room" in the parameter space that the gradient
+                            is large whenever the loss is large — the loss landscape, despite being non-convex, has no bad
+                            local minima that trap gradient descent.
+                        </p>
+
+                        <div class="thm-box thm-box-definition">
+                            <span class="thm-label">Definition 2 (Local PL Condition)</span>
+                            <p>
+                                A function $f$ satisfies the <strong>local PL condition</strong> with parameter $\mu > 0$
+                                on a set $\mathcal{B} \subseteq \R^d$ if
+                                $\frac{1}{2}\|\nabla f(x)\|^2 \geq \mu(f(x) - f^*)$
+                                for all $x \in \mathcal{B}$.
+                            </p>
+                        </div>
+
+                        <p>
+                            The local version is particularly useful in federated and decentralized settings,
+                            where it is unreasonable to expect the global PL condition to hold everywhere,
+                            but it may hold in the region visited by the algorithm.
+                            This is the key assumption underlying several of my own papers on FedAvg and D-FedAvg convergence.
+                        </p>
+                        <p>
+                            In future posts, I will show how the local PL condition interacts with client drift in federated learning
+                            and how it leads to the first linear convergence guarantees for decentralized federated averaging.
+                        </p>
+
+                    </div><!-- end post-content -->
+
+                    <div class="post-nav">
+                        <a href="blog.html" class="back-link">&#8592; Back to Blog</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

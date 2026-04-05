@@ -9,6 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- MathJax for math in post excerpts -->
+    <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <main class="main">
@@ -16,46 +26,104 @@
             <div class="content-wrapper">
                 <div class="profile-section"></div>
                 <div class="bio-section">
-                    <h3 class="section-title">Coming Soon!</h3>
-                    
-                    <!--article class="blog-post">
-                        <h4 class="post-title"><a href="#" class="link">Building Scalable React Applications: Lessons from Production</a></h4>
-                        <p class="post-meta">March 15, 2024</p>
-                        <p class="post-excerpt">In this post, I share key insights from building and maintaining large-scale React applications in production environments. We explore performance optimization techniques, state management patterns, and architectural decisions that have proven effective.</p>
-                </article-->
 
-                    <!--article class="blog-post">
-                        <h4 class="post-title"><a href="#" class="link">Microservices Communication Patterns: A Practical Guide</a></h4>
-                        <p class="post-meta">February 28, 2024</p>
-                        <p class="post-excerpt">A comprehensive look at different communication patterns in microservices architectures, including synchronous and asynchronous patterns, event-driven designs, and when to use each approach.</p>
-                </article-->
+                    <p class="blog-intro">Notes on mathematics, optimization, and machine learning theory. I write about ideas I find beautiful, confusing, or both.</p>
 
-                    <!--article class="blog-post">
-                        <h4 class="post-title"><a href="#" class="link">The Evolution of JavaScript: From ES6 to Modern Development</a></h4>
-                        <p class="post-meta">January 20, 2024</p>
-                        <p class="post-excerpt">Exploring how JavaScript has evolved over the years and how modern features are changing the way we build web applications. Includes practical examples and migration strategies.</p>
-                </article-->
+                    <!-- Tag filter -->
+                    <div class="tag-filter">
+                        <span class="tag-filter-label">Filter:</span>
+                        <button class="tag-btn active" data-tag="all">All</button>
+                        <button class="tag-btn" data-tag="online-learning">Online Learning</button>
+                        <button class="tag-btn" data-tag="federated-learning">Federated Learning</button>
+                        <button class="tag-btn" data-tag="optimization">Optimization</button>
+                        <button class="tag-btn" data-tag="generalization">Generalization</button>
+                    </div>
 
-                    <!--article class="blog-post">
-                        <h4 class="post-title"><a href="#" class="link">Database Performance Optimization in Cloud Environments</a></h4>
-                        <p class="post-meta">December 10, 2023</p>
-                        <p class="post-excerpt">Practical techniques for optimizing database performance in cloud-native applications, including query optimization, connection pooling, and caching strategies with real-world benchmarks.</p>
-                </article-->
+                    <!-- Post 1 -->
+                    <article class="blog-post" data-tags="optimization online-learning">
+                        <div class="post-meta-row">
+                            <span class="post-date">March 2025</span>
+                            <span class="post-reading-time">8 min read</span>
+                        </div>
+                        <h4 class="post-title">
+                            <a href="blog-pl-condition.html" class="link">The Polyak–Łojasiewicz Condition: A Gentle Introduction</a>
+                        </h4>
+                        <div class="post-tags">
+                            <span class="post-tag">Optimization</span>
+                            <span class="post-tag">Online Learning</span>
+                        </div>
+                        <p class="post-excerpt">
+                            The PL condition is a relaxation of strong convexity that still enables linear convergence of gradient descent on non-convex functions. A function $f$ satisfies PL with parameter $\mu > 0$ if
+                            $\frac{1}{2}\|\nabla f(x)\|^2 \geq \mu(f(x) - f^*)$ for all $x$.
+                            We unpack what this means geometrically and why it is the right tool for analyzing overparameterized models.
+                        </p>
+                    </article>
 
-                    <!--article class="blog-post">
-                        <h4 class="post-title"><a href="#" class="link">DevOps Best Practices for Modern Web Applications</a></h4>
-                        <p class="post-meta">November 15, 2023</p>
-                        <p class="post-excerpt">A detailed guide to implementing DevOps practices for web applications, covering CI/CD pipelines, infrastructure as code, monitoring, and security considerations.</p>
-                </article-->
+                    <!-- Post 2 -->
+                    <article class="blog-post" data-tags="federated-learning optimization">
+                        <div class="post-meta-row">
+                            <span class="post-date">January 2025</span>
+                            <span class="post-reading-time">12 min read</span>
+                        </div>
+                        <h4 class="post-title">
+                            <a href="#" class="link">Why Does FedAvg Converge? An Intuitive Walkthrough</a>
+                        </h4>
+                        <div class="post-tags">
+                            <span class="post-tag">Federated Learning</span>
+                            <span class="post-tag">Optimization</span>
+                        </div>
+                        <p class="post-excerpt">
+                            FedAvg is the workhorse of federated learning, yet its convergence under data heterogeneity is subtle.
+                            The core issue is <em>client drift</em>: local SGD steps pull each client's iterate toward its own minimizer
+                            $x_i^* = \arg\min F_i(x)$, away from the global minimizer $x^* = \arg\min \frac{1}{n}\sum_i F_i(x)$.
+                            Understanding this drift is key to both the algorithm's failure modes and its fixes.
+                        </p>
+                    </article>
 
-                    <!--h3 class="section-title">External Publications</h3-->
-                    <!--p>I also write for various technical publications and platforms:</p-->
-                    <!--ul class="external-links">
-                        <li><a href="#" class="link">Medium</a> - Technical deep-dives and industry insights</li>
-                        <li><a href="#" class="link">Dev.to</a> - Tutorials and programming tips</li>
-                        <li><a href="#" class="link">CSS-Tricks</a> - Frontend development articles</li>
-                        <li><a href="#" class="link">Smashing Magazine</a> - Web development best practices</li>
-                </ul-->
+                    <!-- Post 3 -->
+                    <article class="blog-post" data-tags="online-learning">
+                        <div class="post-meta-row">
+                            <span class="post-date">November 2024</span>
+                            <span class="post-reading-time">10 min read</span>
+                        </div>
+                        <h4 class="post-title">
+                            <a href="#" class="link">Dynamic Regret vs. Static Regret: What's the Difference and Why It Matters</a>
+                        </h4>
+                        <div class="post-tags">
+                            <span class="post-tag">Online Learning</span>
+                        </div>
+                        <p class="post-excerpt">
+                            Static regret measures performance against the best fixed action in hindsight:
+                            $\mathrm{Regret}_T = \sum_{t=1}^T \ell_t(x_t) - \min_x \sum_{t=1}^T \ell_t(x)$.
+                            When the environment is non-stationary, the optimal action itself shifts over time and dynamic regret
+                            $\mathrm{D\text{-}Regret}_T = \sum_{t=1}^T \bigl[\ell_t(x_t) - \ell_t(x_t^*)\bigr]$
+                            is the right measure. We explore when sub-linear dynamic regret is achievable.
+                        </p>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="blog-post" data-tags="generalization federated-learning">
+                        <div class="post-meta-row">
+                            <span class="post-date">September 2024</span>
+                            <span class="post-reading-time">15 min read</span>
+                        </div>
+                        <h4 class="post-title">
+                            <a href="#" class="link">Generalization in Federated Learning: Beyond Training Loss</a>
+                        </h4>
+                        <div class="post-tags">
+                            <span class="post-tag">Generalization</span>
+                            <span class="post-tag">Federated Learning</span>
+                        </div>
+                        <p class="post-excerpt">
+                            Most convergence analyses of federated algorithms focus on optimization error alone.
+                            But in practice, what matters is how well the learned model $\hat{w}$ performs on unseen data.
+                            The generalization gap $\mathbb{E}[L(\hat{w})] - L_S(\hat{w})$ depends critically on client count $M$
+                            and local sample size $n$. We derive tight bounds that reveal the interplay between these quantities.
+                        </p>
+                    </article>
+
+                    <p class="blog-more-coming">More posts coming soon.</p>
+
                 </div>
             </div>
         </div>

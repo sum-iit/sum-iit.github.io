@@ -530,7 +530,355 @@ li {
     color: #ddd;
 }
 
-/* News list */
+/* ===================== BLOG INDEX ===================== */
+
+.blog-intro {
+    color: #999;
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+    line-height: 1.6;
+}
+
+/* Tag filter bar */
+.tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.tag-filter-label {
+    color: #555;
+    font-size: 0.8rem;
+    margin-right: 0.25rem;
+}
+
+.tag-btn {
+    background: transparent;
+    color: #666;
+    border: 1px solid #333;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.tag-btn:hover {
+    border-color: #4a9eff;
+    color: #4a9eff;
+}
+
+.tag-btn.active {
+    background: #2c5aa0;
+    border-color: #2c5aa0;
+    color: white;
+}
+
+/* Blog post listing */
+.blog-post {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #1a1a1a;
+    transition: opacity 0.25s ease;
+}
+
+.blog-post:last-of-type {
+    border-bottom: none;
+}
+
+.blog-post.hidden {
+    display: none;
+}
+
+.post-meta-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.post-date {
+    color: #555;
+    font-size: 0.82rem;
+}
+
+.post-reading-time {
+    color: #444;
+    font-size: 0.78rem;
+}
+
+.post-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+    color: white;
+}
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.5rem 0 0.75rem;
+}
+
+.post-tag {
+    background: transparent;
+    border: 1px solid #2c5aa0;
+    color: #4a9eff;
+    font-size: 0.72rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+}
+
+.post-excerpt {
+    color: #aaa;
+    font-size: 0.93rem;
+    line-height: 1.75;
+}
+
+.blog-more-coming {
+    color: #444;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* ===================== BLOG POST PAGE ===================== */
+
+/* Back link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #4a9eff;
+    text-decoration: none;
+    font-size: 0.88rem;
+    margin-bottom: 1.75rem;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #90caf9;
+}
+
+/* Post header */
+.post-page-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.post-page-title {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.35;
+    margin-bottom: 1rem;
+}
+
+.post-page-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    color: #555;
+    font-size: 0.82rem;
+}
+
+/* Table of contents */
+.toc {
+    background: #0c0c0c;
+    border: 1px solid #1e1e1e;
+    border-radius: 8px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 2.5rem;
+}
+
+.toc-title {
+    color: #555;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+}
+
+.toc ol {
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.toc li {
+    color: #555;
+    font-size: 0.88rem;
+    margin-bottom: 0.3rem;
+}
+
+.toc a {
+    color: #4a9eff;
+    text-decoration: none;
+}
+
+.toc a:hover {
+    text-decoration: underline;
+}
+
+/* Post body */
+.post-content {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.post-content p {
+    margin-bottom: 1.3rem;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.post-content h2 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 2.75rem 0 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #1a1a1a;
+}
+
+.post-content h2:first-child {
+    border-top: none;
+}
+
+.post-content h3 {
+    color: #bbb;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 1.75rem 0 0.6rem;
+}
+
+/* Display math block */
+.math-block {
+    overflow-x: auto;
+    margin: 1.75rem 0;
+    padding: 1rem 1.25rem;
+    background: #080808;
+    border-radius: 6px;
+    border-left: 3px solid #2c5aa0;
+}
+
+/* Theorem / Lemma / Definition / Corollary / Proof boxes */
+.thm-box {
+    margin: 1.75rem 0;
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    border-left: 4px solid;
+}
+
+.thm-box p {
+    margin: 0;
+    color: #ccc;
+    font-size: 0.96rem;
+    line-height: 1.75;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.thm-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.6rem;
+}
+
+/* Definition — blue */
+.thm-box-definition {
+    background: rgba(44, 90, 160, 0.07);
+    border-color: #2c5aa0;
+}
+.thm-box-definition .thm-label { color: #5a9eff; }
+
+/* Theorem — lighter blue */
+.thm-box-theorem {
+    background: rgba(74, 158, 255, 0.06);
+    border-color: #4a9eff;
+}
+.thm-box-theorem .thm-label { color: #7ab8ff; }
+
+/* Lemma — green */
+.thm-box-lemma {
+    background: rgba(90, 170, 90, 0.06);
+    border-color: #4a8a4a;
+}
+.thm-box-lemma .thm-label { color: #7aba7a; }
+
+/* Proposition — amber */
+.thm-box-proposition {
+    background: rgba(180, 140, 40, 0.06);
+    border-color: #906010;
+}
+.thm-box-proposition .thm-label { color: #c09030; }
+
+/* Corollary — purple */
+.thm-box-corollary {
+    background: rgba(150, 80, 180, 0.06);
+    border-color: #804090;
+}
+.thm-box-corollary .thm-label { color: #b070d0; }
+
+/* Proof — neutral */
+.thm-box-proof {
+    background: #0a0a0a;
+    border-color: #2a2a2a;
+    border-left-width: 2px;
+}
+.thm-box-proof .thm-label { color: #555; }
+
+/* QED symbol */
+.proof-end {
+    text-align: right;
+    color: #444;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Code blocks */
+.post-content pre {
+    background: #080808;
+    border: 1px solid #1a1a1a;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-size: 0.86rem;
+    line-height: 1.65;
+}
+
+.post-content code {
+    font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', 'Courier New', monospace;
+    color: #a8d8ff;
+    font-size: 0.88em;
+}
+
+.post-content pre code {
+    color: #ccc;
+}
+
+/* Post navigation */
+.post-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1a1a1a;
+}
+
+/* ===================== NEWS LIST ===================== */
 .news-list {
     list-style: none;
     margin: 0.5rem 0 1.5rem 0;
