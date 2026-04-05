@@ -1,7 +1,3 @@
-<!-- activities.html -->
-<!-- at the top of activities.html -->
-<body class="activities-page">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,64 +8,180 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-
-    <!-- MathJax with inline $...$ and display $$...$$ support -->
-    <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      }
-    };
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
 </head>
-<body>
+<body class="activities-page">
     <main class="main">
         <div class="container">
             <div class="content-wrapper">
                 <div class="profile-section"></div>
                 <div class="bio-section">
+
+                    <!-- ── Professional Activities ── -->
                     <h3 class="section-title">Professional Activities</h3>
-                    
-                    <h4 class="activity-category">Conference, Summer School and Talks Attended</h4>
-                    <ul class="activity-list">
-                        <li><strong>Summer School</strong> - "2025 ICTS program on Data Science: Probabilistic and Optimization Methods-II at ICTS TIFR Bengalore.</li>
-                        <li><strong>Summer School</strong> - "2025 Joint Telematics Group/IEEE Information Theory Society Summer School on Signal Processing, Communications, and Networks. Indian Institute of Technology Bombay."</li>
-                        <li><strong>Conference</strong> - "2025 IEEE International Conference on Acoustics, Speech, and Signal Processing, Hyderabad,India.(Poster Presentation)"</li>
-                        <li><strong>Talk</strong> - "VIVRITI '2024: $3^{rd}$ Annual 3-Minute Research Seminar at IIT Dharwad."</li>
-                        <li><strong>Suumer School</strong> - "2023 Joint Telematics Group/IEEE Information Theory Society Summer School on Signal Processing, Communications, and Networks. Indian Institute of Science(IISc) Bangalore."</li>
-                        <li><strong>Summer School</strong> - "Artificial Intelligence Summer School, 2023. Indraprastha Institute of Information Technology Delhi."</li>
-                        <li><strong>Conference</strong> - "35th Annual Conference of the Mathematical Society- Banaras Hindu University(BHU) on "Advancement in Mathematical Analysis and their Applications" 2019."</li>
-                        <li><strong>Summer Research Program</strong> - "Summer Outreach Program, National Institute of Science Education and Research, 2018 | Supervised by: Dr. Sutanu Roy."</li>
-                    </ul>
 
-                    <h3 class="section-title">Scholastic Achievements</h3>
-                    <ul class="National Level Exams">
-                        <li><strong>Qualified Gate Mathematics(MA)</strong> - (2019)</li>
-                        <li><strong>Qualified CSIR-NET (LS), Mathematical Sciences</strong> - (2019)</li>
-                    </ul>
+                    <div class="activity-timeline">
 
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2025</span>
+                                <span class="activity-badge badge-school">Summer School</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-title">ICTS Program on Data Science: Probabilistic and Optimization Methods&nbsp;II</p>
+                                <p class="timeline-venue">ICTS TIFR, Bengaluru, India</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2025</span>
+                                <span class="activity-badge badge-school">Summer School</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-title">Joint Telematics Group / IEEE Information Theory Society Summer School on Signal Processing, Communications, and Networks</p>
+                                <p class="timeline-venue">Indian Institute of Technology Bombay, India</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2025</span>
+                                <span class="activity-badge badge-conference">Conference</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-title">IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP) — <em>Poster Presentation</em></p>
+                                <p class="timeline-venue">Hyderabad, India</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2024</span>
+                                <span class="activity-badge badge-talk">Talk</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-title">VIVRITI '2024: 3<sup>rd</sup> Annual 3-Minute Research Seminar</p>
+                                <p class="timeline-venue">IIT Dharwad, India</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2023</span>
+                                <span class="activity-badge badge-school">Summer School</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-title">Joint Telematics Group / IEEE Information Theory Society Summer School on Signal Processing, Communications, and Networks</p>
+                                <p class="timeline-venue">Indian Institute of Science (IISc), Bengaluru, India</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2023</span>
+                                <span class="activity-badge badge-school">Summer School</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-title">Artificial Intelligence Summer School 2023</p>
+                                <p class="timeline-venue">Indraprastha Institute of Information Technology Delhi (IIIT-D), India</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2019</span>
+                                <span class="activity-badge badge-conference">Conference</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-title">35th Annual Conference of the Mathematical Society — "Advancement in Mathematical Analysis and their Applications"</p>
+                                <p class="timeline-venue">Banaras Hindu University (BHU), India</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-meta">
+                                <span class="timeline-year">2018</span>
+                                <span class="activity-badge badge-research">Research Program</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="timeline-title">Summer Outreach Research Program</p>
+                                <p class="timeline-venue">National Institute of Science Education and Research (NISER) &middot; Supervisor: Dr. Sutanu Roy</p>
+                            </div>
+                        </div>
+
+                    </div><!-- end timeline -->
+
+                    <!-- ── Scholastic Achievements ── -->
+                    <h3 class="section-title" style="margin-top:2.5rem;">Scholastic Achievements</h3>
+
+                    <div class="achievement-grid">
+                        <div class="achievement-card">
+                            <span class="achievement-icon">&#9733;</span>
+                            <div>
+                                <p class="achievement-title">GATE Mathematics (MA)</p>
+                                <p class="achievement-year">Qualified &middot; 2019</p>
+                            </div>
+                        </div>
+                        <div class="achievement-card">
+                            <span class="achievement-icon">&#9733;</span>
+                            <div>
+                                <p class="achievement-title">CSIR-NET (LS), Mathematical Sciences</p>
+                                <p class="achievement-year">Qualified &middot; 2019</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── Professional Memberships ── -->
                     <h3 class="section-title">Professional Memberships</h3>
-                    <ul class="membership-list">
-                        <li>IEEE Graduate Student Membership</li>
-                    </ul>
 
-                    <h3 class="section-title">Volunteer Work</h3>
-                    <p>I am committed to giving back to the community through various volunteer activities:</p>
-                    <ul class="volunteer-list">
-                        <li>Senate Student Member (Academics) | IIT Dharwad. [May,24 to May,25]</li>
-                        <li>General Secretary Academic Affairs (PG) | IIT Dharwad. [May, 23 to May, 25]</li>
-                        <li>DPGC Member | Department of Electrical Engineering, IIT Dharwad. [March,22 to March,23]</li>
-                    </ul>
+                    <div class="membership-card">
+                        <span class="membership-icon">&#9670;</span>
+                        <p class="membership-name">IEEE Graduate Student Member</p>
+                    </div>
 
-                    <h3 class="section-title">Extracurricular Activities</h3>
-                    <ul class="Things I Like">
-                        <li>Playing Badminton, Cricket, Chess, Volleyball.</li>
-                        <li>Cooking</li>
-                        <li>Reading Novels and story books</li>
-                    </ul>
+                    <!-- ── Volunteer & Service ── -->
+                    <h3 class="section-title">Volunteer &amp; Institute Service</h3>
+
+                    <div class="service-list">
+
+                        <div class="service-item">
+                            <div class="service-header">
+                                <p class="service-role">Senate Student Member (Academics)</p>
+                                <span class="service-period">May 2024 – May 2025</span>
+                            </div>
+                            <p class="service-org">IIT Dharwad</p>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-header">
+                                <p class="service-role">General Secretary — Academic Affairs (PG)</p>
+                                <span class="service-period">May 2023 – May 2025</span>
+                            </div>
+                            <p class="service-org">IIT Dharwad</p>
+                        </div>
+
+                        <div class="service-item">
+                            <div class="service-header">
+                                <p class="service-role">DPGC Member</p>
+                                <span class="service-period">March 2022 – March 2023</span>
+                            </div>
+                            <p class="service-org">Department of Electrical Engineering, IIT Dharwad</p>
+                        </div>
+
+                    </div>
+
+                    <!-- ── Extracurricular ── -->
+                    <h3 class="section-title">Extracurricular Interests</h3>
+
+                    <div class="interest-tags">
+                        <span class="interest-tag">&#127992; Badminton</span>
+                        <span class="interest-tag">&#127955; Cricket</span>
+                        <span class="interest-tag">&#9822; Chess</span>
+                        <span class="interest-tag">&#127944; Volleyball</span>
+                        <span class="interest-tag">&#127859; Cooking</span>
+                        <span class="interest-tag">&#128218; Reading</span>
+                    </div>
+
                 </div>
             </div>
         </div>

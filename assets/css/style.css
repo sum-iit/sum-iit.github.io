@@ -404,32 +404,260 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
 }
 
-/* Activities page styles */
-.activity-category {
-    color: #ccc;
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin: 1.5rem 0 1rem 0;
+/* ===================== ACTIVITIES PAGE ===================== */
+
+/* Timeline */
+.activity-timeline {
+    position: relative;
+    margin: 1rem 0 2rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid #1e3a5f;
 }
 
-.activity-list, .award-list, .membership-list, .volunteer-list {
-    list-style: none;
+.timeline-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.4rem;
+    top: 0.35rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4a9eff;
+    border: 2px solid #000;
+}
+
+.timeline-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding-top: 0.1rem;
+}
+
+.timeline-year {
+    font-family: 'Inter', sans-serif;
+    color: #4a9eff;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Activity type badges */
+.activity-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.badge-conference {
+    background: rgba(74, 158, 255, 0.12);
+    color: #6ab4ff;
+    border: 1px solid #2c5aa0;
+}
+
+.badge-school {
+    background: rgba(90, 170, 90, 0.1);
+    color: #7aba7a;
+    border: 1px solid #3a6a3a;
+}
+
+.badge-talk {
+    background: rgba(192, 144, 48, 0.1);
+    color: #c8a84a;
+    border: 1px solid #7a5a10;
+}
+
+.badge-research {
+    background: rgba(150, 80, 180, 0.1);
+    color: #b07ad0;
+    border: 1px solid #6a3a8a;
+}
+
+.timeline-body {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #111;
+}
+
+.timeline-item:last-child .timeline-body {
+    border-bottom: none;
+}
+
+.timeline-title {
+    font-family: 'Lora', serif;
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0 0 0.3rem 0;
+}
+
+.timeline-venue {
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    font-size: 0.82rem;
+    margin: 0;
+}
+
+/* Achievement cards */
+.achievement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
     margin: 1rem 0 2rem 0;
 }
 
-.activity-list li, .award-list li, .membership-list li, .volunteer-list li {
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-    position: relative;
+.achievement-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: rgba(44, 90, 160, 0.07);
+    border: 1px solid #1e3a5f;
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+}
+
+.achievement-icon {
+    color: #c8a84a;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.achievement-title {
+    font-family: 'Inter', sans-serif;
+    color: #ddd;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 0 0.25rem 0;
+    line-height: 1.4;
+}
+
+.achievement-year {
+    font-family: 'Inter', sans-serif;
+    color: #555;
+    font-size: 0.78rem;
+    margin: 0;
+}
+
+/* Membership */
+.membership-card {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid #1e1e1e;
+    border-radius: 8px;
+    padding: 0.85rem 1.1rem;
+    margin: 1rem 0 2rem 0;
+    width: fit-content;
+}
+
+.membership-icon {
+    color: #4a9eff;
+    font-size: 0.85rem;
+}
+
+.membership-name {
+    font-family: 'Inter', sans-serif;
+    color: #ccc;
+    font-size: 0.92rem;
+    margin: 0;
+}
+
+/* Service / Volunteer */
+.service-list {
+    margin: 1rem 0 2rem 0;
+}
+
+.service-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #111;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.25rem;
+}
+
+.service-role {
+    font-family: 'Inter', sans-serif;
+    color: #ddd;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.service-period {
+    font-family: 'Inter', sans-serif;
+    color: #4a9eff;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.service-org {
+    font-family: 'Inter', sans-serif;
+    color: #555;
+    font-size: 0.82rem;
+    margin: 0;
+}
+
+/* Extracurricular interest tags */
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.interest-tag {
+    font-family: 'Inter', sans-serif;
+    background: #111;
+    border: 1px solid #222;
+    color: #bbb;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.interest-tag:hover {
+    border-color: #4a9eff;
     color: #ddd;
 }
 
-.activity-list li::before, .award-list li::before, .membership-list li::before, .volunteer-list li::before {
-    content: "•";
-    color: #4a9eff;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
+@media (max-width: 768px) {
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .timeline-meta {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Blog page styles */
