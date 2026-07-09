@@ -15,7 +15,7 @@ body {
     font-family: 'Lora', Georgia, 'Times New Roman', serif;
     line-height: 1.7;
     color: #333;
-    background-color: #000;
+    background-color: #050607;
     min-height: 100vh;
 }
 
@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Main content */
 .main {
-    background-color: #000;
+    background-color: #050607;
     min-height: calc(100vh - 80px);
     padding: 3rem 0;
 }
@@ -197,9 +197,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #4a9eff;
     text-decoration: none;
     transition: color 0.2s ease;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
+    width: fit-content;
 }
 
 .social-link:hover {
@@ -245,7 +245,55 @@ h1, h2, h3, h4, h5, h6 {
 
 .bio-section p {
     margin-bottom: 1.5rem;
-    text-align: justify;
+    text-align: left;
+}
+
+.research-focus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+}
+
+.research-focus span {
+    border: 1px solid #284d79;
+    border-radius: 4px;
+    color: #a8c8ec;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    padding: 0.25rem 0.55rem;
+}
+
+.focus-list {
+    margin: 0.5rem 0 2rem;
+}
+
+.focus-item {
+    border-bottom: 1px solid #1a1a1a;
+    padding: 1rem 0;
+}
+
+.focus-item:first-child {
+    padding-top: 0;
+}
+
+.focus-item:last-child {
+    border-bottom: none;
+}
+
+.focus-title {
+    color: #4a9eff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+}
+
+.focus-item p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 0;
 }
 
 .link {
@@ -758,7 +806,7 @@ li {
 
 .post-content p {
     margin-bottom: 1.3rem;
-    text-align: justify;
+    text-align: left;
     text-align-last: left;
 }
 
@@ -1067,7 +1115,7 @@ li {
     }
 
     .bio-section p {
-        text-align: justify; /* Keep justify alignment on mobile */
+        text-align: left;
     }
 
     .main {

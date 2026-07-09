@@ -3,8 +3,8 @@
 const SITE_CONFIG = {
     // Personal Information - EDIT THESE VALUES
     name: "Sumit Sah",
-    title: "Senior Research Fellow", 
-    affiliation: "Indian Institute of Technology Dharwad, INDIA",
+    title: "Visiting Research Student",
+    affiliation: "MBZUAI, Abu Dhabi",
     email: "sumit.sah1824@gmail.com",
     
     // Social Media Links - EDIT THESE URLs
@@ -70,16 +70,16 @@ function loadTemplate() {
                 <p class="profile-affiliation">${SITE_CONFIG.affiliation}</p>
                 <div class="profile-social">
                     <a href="${SITE_CONFIG.social.googleScholar}" target="_blank" rel="noopener noreferrer" class="social-link" title="Google Scholar">
-                        🎓 Google Scholar
+                        Google Scholar
                     </a>
                     <a href="${SITE_CONFIG.social.linkedin}" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-                        💼 LinkedIn
+                        LinkedIn
                     </a>
                     <a href="${SITE_CONFIG.social.youtube}" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube">
-                        📺 YouTube
+                        YouTube
                     </a>
                     <a href="assets/files/resume.pdf" target="_blank" rel="noopener noreferrer" class="social-link" title="CV / Resume">
-                        📄 CV / Resume
+                        CV / Resume
                     </a>
                 </div>
                 <a href="mailto:${SITE_CONFIG.email}" class="profile-email">${SITE_CONFIG.email}</a>
