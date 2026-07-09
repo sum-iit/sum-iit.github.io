@@ -947,17 +947,79 @@ li {
 }
 
 /* ===================== NEWS LIST ===================== */
+.news-ticker {
+    align-items: center;
+    border: 1px solid #1e3a5f;
+    border-radius: 4px;
+    color: #dbeafe;
+    display: flex;
+    gap: 0.8rem;
+    margin: 0.5rem 0 1.2rem;
+    overflow: hidden;
+    padding: 0.55rem 0.75rem;
+    text-decoration: none;
+}
+
+.news-ticker:hover {
+    border-color: #4a9eff;
+    text-decoration: none;
+}
+
+.news-ticker-label {
+    background: #2c5aa0;
+    border-radius: 3px;
+    color: #fff;
+    flex: 0 0 auto;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    padding: 0.35rem 0.5rem;
+    text-transform: uppercase;
+}
+
+.news-ticker-window {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.news-ticker-text {
+    animation: news-scroll 22s linear infinite;
+    display: inline-block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.9rem;
+    padding-left: 100%;
+    white-space: nowrap;
+}
+
+.news-ticker:hover .news-ticker-text {
+    animation-play-state: paused;
+}
+
+@keyframes news-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 .news-list {
     list-style: none;
-    margin: 0.5rem 0 1.5rem 0;
+    margin: 0.5rem 0 1.5rem;
     padding: 0;
 }
 
 .news-list li {
     display: flex;
-    gap: 1rem;
-    align-items: baseline;
-    padding: 0.5rem 0;
+    gap: 1.1rem;
+    align-items: flex-start;
+    padding: 0.85rem 0;
     border-bottom: 1px solid #1a1a1a;
     color: #ddd;
     font-size: 0.95rem;
@@ -973,6 +1035,40 @@ li {
     white-space: nowrap;
     min-width: 70px;
     font-weight: 500;
+}
+
+.news-body {
+    min-width: 0;
+}
+
+.news-title {
+    color: #4a9eff;
+    display: inline-block;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.45;
+    margin-bottom: 0.2rem;
+    text-decoration: none;
+}
+
+.news-title:hover {
+    color: #90caf9;
+    text-decoration: underline;
+}
+
+.news-body p {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .news-ticker-text {
+        animation: none;
+        padding-left: 0;
+    }
 }
 
 /* Publication badge */
@@ -1116,6 +1212,15 @@ li {
 
     .bio-section p {
         text-align: left;
+    }
+
+    .news-list li {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .news-date {
+        min-width: 0;
     }
 
     .main {
