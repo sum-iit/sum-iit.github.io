@@ -37,18 +37,28 @@ function loadTemplate() {
     if (currentPage === 'index' || currentPath === '/' || currentFile === '') {
         document.body.classList.add('home-page');
     }
+    document.body.classList.add(`${currentPage}-page`);
     
     // Create header with mobile menu
     const headerHTML = `
+        <div class="utility-bar">
+            <div class="utility-inner">
+                <a class="utility-brand" href="https://mbzuai.ac.ae/" target="_blank" rel="noopener noreferrer">MBZUAI</a>
+                <span class="utility-unit">Trustworthy Machine Learning &middot; Optimization &middot; Agentic AI</span>
+            </div>
+        </div>
         <header class="header">
             <div class="container">
-                <a href="index.html" class="site-title">${SITE_CONFIG.name}</a>
+                <a href="index.html" class="site-title">
+                    <span class="site-title-main">${SITE_CONFIG.name}</span>
+                    <span class="site-title-role">${SITE_CONFIG.title}</span>
+                </a>
                 <nav class="nav" id="navMenu">
                     ${SITE_CONFIG.navigation.map(item => 
                         `<a href="${item.href}" class="nav-link ${item.page === currentPage ? 'active' : ''}">${item.text}</a>`
                     ).join('')}
                 </nav>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-expanded="false" aria-controls="navMenu">Menu</button>
             </div>
         </header>
     `;
@@ -78,11 +88,11 @@ function loadTemplate() {
                     <a href="${SITE_CONFIG.social.youtube}" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube">
                         YouTube
                     </a>
-                    <a href="assets/files/resume.pdf" target="_blank" rel="noopener noreferrer" class="social-link" title="CV / Resume">
-                        CV / Resume
-                    </a>
                 </div>
-                <a href="mailto:${SITE_CONFIG.email}" class="profile-email">${SITE_CONFIG.email}</a>
+                <div class="profile-actions">
+                    <a href="mailto:${SITE_CONFIG.email}" class="profile-email">${SITE_CONFIG.email}</a>
+                    <a href="assets/files/resume.pdf" target="_blank" rel="noopener noreferrer" class="profile-cv">CV / Resume</a>
+                </div>
             </div>
         </div>
     `;
@@ -100,7 +110,10 @@ function loadTemplate() {
     const footerHTML = `
         <footer class="footer">
             <div class="footer-container">
-                <p class="footer-text">© ${new Date().getFullYear()} ${SITE_CONFIG.name} &middot; ${SITE_CONFIG.affiliation}</p>
+                <div class="footer-brand-block">
+                    <a class="footer-kicker footer-link" href="https://mbzuai.ac.ae/" target="_blank" rel="noopener noreferrer">MBZUAI</a>
+                    <p class="footer-text">${SITE_CONFIG.name} &middot; ${SITE_CONFIG.affiliation}</p>
+                </div>
                 <p class="footer-text footer-updated">Last updated: ${new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</p>
             </div>
         </footer>
@@ -122,9 +135,11 @@ function initializeMobileMenu() {
             
             // Change hamburger icon
             if (navMenu.classList.contains('active')) {
-                mobileMenuBtn.textContent = '✕';
+                mobileMenuBtn.textContent = 'Close';
+                mobileMenuBtn.setAttribute('aria-expanded', 'true');
             } else {
-                mobileMenuBtn.textContent = '☰';
+                mobileMenuBtn.textContent = 'Menu';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             }
         });
         
@@ -133,7 +148,8 @@ function initializeMobileMenu() {
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
-                mobileMenuBtn.textContent = '☰';
+                mobileMenuBtn.textContent = 'Menu';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             });
         });
         
@@ -141,7 +157,8 @@ function initializeMobileMenu() {
         document.addEventListener('click', function(event) {
             if (!mobileMenuBtn.contains(event.target) && !navMenu.contains(event.target)) {
                 navMenu.classList.remove('active');
-                mobileMenuBtn.textContent = '☰';
+                mobileMenuBtn.textContent = 'Menu';
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             }
         });
     }
